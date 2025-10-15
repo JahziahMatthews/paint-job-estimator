@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4 text-center text-blue-600">Paint Job Estimator</h1>
+
+        <div class="space-y-3">
+            <div>
+                <label class="block font-semibold">Walls:</label>
+                <input id="wallHeight" type="number" placeholder="Height (ft)" class="border rounded p-2 w-full mb-1">
+                <input id="wallWidth" type="number" placeholder="Width (ft)" class="border rounded p-2 w-full mb-1">
+                <input id="numWalls" type="number" placeholder="Number of Walls" class="border rounded p-2 w-full">
+            </div>
+
+            <div>
+                <label class="block font-semibold">Doors:</label>
+                <input id="doorHeight" type="number" placeholder="Height (ft)" class="border rounded p-2 w-full mb-1">
+                <input id="doorWidth" type="number" placeholder="Width (ft)" class="border rounded p-2 w-full mb-1">
+                <input id="numDoors" type="number" placeholder="Number of Doors" class="border rounded p-2 w-full">
+            </div>
+
+            <div>
+                <label class="block font-semibold">Windows:</label>
+                <input id="windowHeight" type="number" placeholder="Height (ft)" class="border rounded p-2 w-full mb-1">
+                <input id="windowWidth" type="number" placeholder="Width (ft)" class="border rounded p-2 w-full mb-1">
+                <input id="numWindows" type="number" placeholder="Number of Windows" class="border rounded p-2 w-full">
+            </div>
+
+            <div>
+                <label class="block font-semibold">Price of Paint per Gallon ($):</label>
+                <input id="paintPrice" type="number" placeholder="e.g. 50" class="border rounded p-2 w-full">
+            </div>
+
+            <button onclick="calculatePaintJob()"
+                class="bg-blue-600 text-white font-semibold py-2 w-full rounded hover:bg-blue-700">
+                Calculate
+            </button>
+        </div>
+
+        <div id="results" class="mt-5 bg-gray-50 p-4 rounded hidden">
+            <h2 class="text-lg font-semibold mb-2">Results:</h2>
+            <p id="wallArea"></p>
+            <p id="doorArea"></p>
+            <p id="windowArea"></p>
+            <p id="paintArea"></p>
+            <p id="gallons"></p>
+            <p id="hours"></p>
+            <p id="paintCost"></p>
+            <p id="laborCost"></p>
+            <p id="totalCost" class="font-bold text-blue-600"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
