@@ -38,7 +38,6 @@ function calculatePaintJob() {
   const laborCost = laborHours * LABOR_RATE;
   const totalCost = paintCost + laborCost;
 
-
   document.getElementById("results").classList.remove("hidden");
   document.getElementById("wallArea").textContent = `Square feet walls: ${wallArea.toFixed(1)}`;
   document.getElementById("doorArea").textContent = `Square feet doors: ${doorArea.toFixed(1)}`;
